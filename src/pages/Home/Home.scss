@@ -1,0 +1,48 @@
+.box {
+	width: 100px;
+	height: 100px;
+  border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: #28a92b;
+	font-weight: 600;
+	color: white;
+}
+
+
+#firstCircle {
+    background-color: yellow;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    border: 2px solid blue;
+    margin-bottom: 30%;
+  }
+  
+  p {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  #secondCircle {
+    background-color: blue;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    border: 2px solid yellow;
+    margin-bottom: 30%;
+  }
+  
+  #thirdCircle {
+    background-color: black;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: 10px 0;
+    border: 2px solid yellow;
+  }
+  

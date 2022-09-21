@@ -1,0 +1,427 @@
+.header:before {
+    content:"";
+    @apply absolute top-0 left-0 w-full h-[333px] bg-gradient1;
+}
+.header .navbar ul li a {
+    @apply text-white text-18 font-secondary italic relative py-20 px-15;
+    -webkit-font-smoothing: antialiased;
+}
+.header .navbar ul li a span {
+    @apply relative top-[1px] pl-5 text-white text-14;
+}
+.header .navbar ul li a:hover {
+    @apply bg-[url('../../../public/images/menu-bg.jpg')] bg-cover bg-no-repeat text-red-300;
+}
+.header .navbar ul li a:hover span {
+    @apply text-red-300;
+}
+.header .navbar ul li a:hover::before {
+    content:"";
+    @apply absolute left-[10%] bottom-5 w-[80%] h-2 bg-[url('../../../public/images/menu-textured-line.svg')] bg-no-repeat bg-contain;
+}
+.header .navbar ul li.menuHoveractive a {
+    @apply bg-[url('../../../public/images/menu-bg.jpg')] text-red-300;
+}
+.header .navbar ul li.menuHoveractive a span i {
+    @apply text-red-300;
+}
+.header .navbar ul li.menuHoveractive a::before {
+    content:"";
+    @apply absolute left-[10%] bottom-5 w-[80%] h-2 bg-[url('../../../public/images/menu-textured-line.svg')] bg-no-repeat bg-contain;
+}
+
+
+/* Menu Start */
+.mainNavGrid {
+    @apply lgscreen:pl-20 mdscreen:pl-5;
+}
+.navbar-icon {
+    @apply w-[24px];
+}
+.navbar-icon .line {
+    @apply w-full h-1 bg-white transition-all duration-300 mb-[7px];
+}
+.navbar-icon .line:last-child {
+    @apply mb-0;
+}
+
+.hamburger.active .line:nth-of-type(1) {
+    @apply bg-white;
+    transform: translateY(3px) rotate(45deg);
+  }
+  .hamburger.active .line:nth-of-type(3) {
+    @apply bg-white relative top-[1px];
+    transform: translateY(-6px) rotate(-45deg);
+  }
+  .hamburger.active .line:nth-of-type(1),
+  .hamburger.active .line:nth-of-type(3) {
+    @apply delay-300;
+  }
+  .hamburger.active .line:nth-of-type(2) {
+    @apply w-0;
+  }
+
+.mainNavimg {
+    @apply w-[55%] absolute h-full z-9  lgscreen:w-50-per;
+}
+.mainNavimg::before {
+    content:"";
+    @apply absolute left-0 top-0 w-full h-full bg-black-400 bg-opacity-40;
+    transform: rotate(180deg);
+}
+.mainNavimg::after {
+    content:"";
+    @apply absolute left-0 top-0 w-full h-full bg-[url('../../../public/images/menu-open-bg.png')] bg-opacity-[];
+}
+.mainNavimg img {
+    @apply h-full object-cover w-full;
+}
+/* .nav-menu-open .header-right ul,
+.nav-menu-open .header-right .navbar-icon {
+    @apply hidden;
+} */
+.nav-menu-open .menu-close {
+    @apply block ml-40 mdscreen:ml-15;
+}
+.main-nav .topMenu li a {
+    @apply font-heading text-black-400 text-34 laptop:text-[22px] mdscreen:text-20 uppercase mdscreen:text-20;
+     -webkit-font-smoothing: antialiased;
+}
+.main-nav .topMenu li a:hover {
+    @apply text-red-300;
+}
+.main-nav .topMenu li a span i {
+    @apply pl-30 text-18 relative top-[-5px] laptop:top-[-1px];
+}
+.navbar-btm-menu ul li a {
+    @apply font-heading text-white text-14;
+}
+.navbar-btm-menu ul li a:hover {
+    @apply text-gold;
+}
+.navbar-btm-menu ul::before {
+    content:"";
+    @apply absolute top-0 right-0 w-[50%] h-1 bg-white desktop2:w-[60%] mdscreen:left-0 mdscreen:w-full;
+}
+.main-nav .topMenu li.sideMenuhoverable {
+    @apply static;
+}
+/* .main-nav .topMenu li.sideMenuhoverable:hover .mega-menu {
+    @apply block !important;
+} */
+.sideMenuhoverable a:hover > .mega-menu {
+    @apply block !important;
+}
+.booking-container {
+    @apply fixed top-0 right-0 z-999 h-screen bg-white w-[40%] lgscreen:w-full;
+}
+.booking-info-container .title-black h3 {
+    @apply text-black-200
+}
+.booking-info-container .content p {
+    @apply text-black-200;
+}
+.sicon ul::before {
+    @apply hidden;
+}
+
+.search-input input {
+    @apply transition-all duration-300 w-0 p-0 pb-10 bg-transparent border-b-1 border-white smscreen2:border-0 outline-none invisible text-white;
+}
+.searchOpen input {
+    @apply transition-all duration-300 w-[160px] p-0 pb-5 bg-transparent border-b-1 border-white visible smscreen:w-[100px];
+}
+.nav-menu-open .searchOpen input {
+    @apply text-black-400;
+}
+.header-sticky .searchOpen input {
+    @apply text-black-400 border-black-400;
+}
+.mega-menu {
+    @apply hidden left-auto mt-10 absolute w-auto transition-all delay-300 py-20 px-20 bg-[url('../../../public/images/menu-bg.jpg')] lgscreen:relative;
+}
+.mega-menu h6 {
+    @apply text-black-500 uppercase text-14 border-b-1 border-black-500 pb-5 mb-10 font-body;
+}
+/* .mega-menu .mega-menu-content ul {
+    @apply pt-10;
+} */
+.mega-menu .mega-menu-content ul li {
+    @apply mb-5;
+}
+.mega-menu .mega-menu-content ul li:last-child {
+    @apply mb-0;
+}
+.mega-menu .mega-menu-content ul li.hoverable a {
+    background: none !important;
+}
+.mega-menu .mega-menu-content ul li a::before  {
+    background: none !important;
+}
+.mega-menu .mega-menu-content ul li a {
+    @apply text-black-500 text-14 font-body p-0 !important;
+    background: none !important;
+}
+
+.mega-menu .mega-menu-content ul li a:hover {
+    @apply text-red-300 !important;
+    background: none;
+}
+
+/* .mega-menu-right .mega-menu {
+    @apply right-0 left-auto;
+} */
+
+.hoverable {
+    @apply static;
+}
+.hoverable:hover .mega-menu,
+.sideMenuhoverable:hover .mega-menu {
+    @apply block transition-all delay-300;
+} 
+.main-nav .topMenu .mega-menu {
+    @apply right-90 left-auto top-10 p-0 mt-0 hidden lgscreen:block; 
+    background: none;
+}
+.main-nav .topMenu li.sideMenuhoverable:hover .mega-menu {
+    @apply block;
+}
+.main-nav .topMenu .mega-menu ul li a {
+    @apply text-17 capitalize font-body;
+}
+.main-nav .topMenu .mega-menu .btn-custom a {
+    @apply text-17;
+}
+.main-nav .topMenu .mega-menu .btn-custom a span {
+    @apply text-red-300 capitalize text-17 px-20 mdscreen:text-14;
+}
+.mainNav__col--right ul li {
+    @apply mt-5;
+}
+.mainNav__col--right ul li a {
+    @apply text-black-400;
+}
+.mainNav__col--right ul li a:hover {
+    @apply text-red-300;
+}
+.mainNav__col--right .content p {
+    @apply mt-[2px] text-black-400;
+}
+.mainNav__col--right .content p a:hover {
+    @apply text-red-300;
+}
+.mainNav__col--right .sicon ul li img {
+    @apply w-20 h-20 object-contain transition-all duration-300;
+} 
+.mainNav__col--right .sicon ul li:hover img {
+    @apply mt-[-5px] transition-all duration-300;
+}
+
+/* Menu End */
+
+/* New Menu Start */
+.main-nav {
+  @apply bg-[url('../../../public/images/menu-open-bg.jpg')] fixed w-full h-screen hidden top-0 z-999 opacity-100 bg-cover;
+  -webkit-animation-name: fade-in;
+    animation-name: fade-in;
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-direction: forward;
+    animation-direction: forward;
+}
+.nav-menu-open .main-nav {
+  @apply block;
+  -webkit-animation-name: slide-fade-in-left;
+    animation-name: slide-fade-in-left;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-direction: forward;
+    animation-direction: forward;
+}
+.booking-container {
+  @apply hidden;
+  -webkit-animation-name: fade-in;
+    animation-name: fade-in;
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s;
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-direction: forward;
+    animation-direction: forward;
+}
+.booking-menu-open .booking-container {
+  @apply block;
+  -webkit-animation-name: slide-in-right;
+    animation-name: slide-in-right;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-direction: forward;
+    animation-direction: forward;
+}
+.nav-menu-open {
+  @apply overflow-y-hidden;
+}
+.nav-menu-open .bk-btn {
+    @apply lgscreen:block;
+}
+
+@-webkit-keyframes fade-in{
+  0%{
+      opacity:0
+  }
+  to{
+      opacity:1
+  }
+}
+@keyframes fade-in{
+  0%{
+      opacity:0
+  }
+  to{
+      opacity:1
+  }
+}
+@-webkit-keyframes slide-fade-in-left{
+  0%{
+      opacity:0;
+      transform:translateX(-2rem)
+  }
+  to{
+      opacity:1;
+      transform:translateX(0)
+  }
+}
+@keyframes slide-fade-in-left{
+  0%{
+      opacity:0;
+      transform:translateX(-2rem)
+  }
+  to{
+      opacity:1;
+      transform:translateX(0)
+  }
+}
+@-webkit-keyframes slide-in-right{
+  0%{
+      transform:translateX(100%)
+  }
+  to{
+      transform:translateX(0)
+  }
+}
+@keyframes slide-in-right{
+  0%{
+      transform:translateX(100%)
+  }
+  to{
+      transform:translateX(0)
+  }
+}
+/* New Menu End */
+header.header {
+    @apply transition-all duration-300;
+}
+.header-sticky header {
+    @apply fixed w-full bg-white py-20 transition-all duration-300;
+}
+.header-sticky header .navbar ul li a {
+    @apply text-black-400;
+}
+.header-sticky header .sticky-logo {
+    @apply block;
+}
+.header-sticky header {
+    @apply pt-0 pb-10;
+}
+.header-sticky header .navbar {
+    @apply pt-10;
+}
+.header-sticky header .normal-logo {
+    @apply absolute top-0;
+}
+.header-sticky header .normal-logo img {
+    @apply max-w-[150px];
+}
+.header-sticky header .header-menu .header-menu-top {
+    @apply pl-[250px];
+}
+.header-sticky header .search button img {
+    filter: invert(150%) sepia(0%) saturate(5323%) hue-rotate(154deg) brightness(100%) contrast(100%);
+}
+.header-sticky header .header-menu ul a span i {
+    @apply text-black-400;
+}
+.header-sticky header .navbar-icon .line {
+    @apply bg-black-400;
+}
+.header-sticky header .sticky-close {
+    @apply block;
+}
+.header-sticky header .normal-close {
+    @apply hidden;
+}
+.header-sticky header.header::before {
+    @apply hidden;
+}
+body.header-sticky.nav-menu-open header {
+    @apply bg-transparent;
+}
+body.header-sticky.nav-menu-open .sticky-logo {
+    @apply hidden;
+}
+body.header-sticky.nav-menu-open .normal-logo {
+    @apply block;
+}
+/* body.header-sticky.nav-menu-open .header .navbar ul li a {
+    @apply text-white;
+} */
+.nav-menu-open header.header {
+    @apply z-[99999];
+}
+.nav-menu-open header.header::before {
+    @apply h-[100px];
+}
+
+.nav-menu-open .header .navbar ul li a {
+    @apply text-black-400;
+}
+.nav-menu-open .header .navbar ul li a:hover,
+.nav-menu-open .header .navbar ul li a:hover span i {
+    @apply text-red-300;
+}
+.nav-menu-open .header .navbar ul li a span i {
+    @apply text-black-400;
+}
+.nav-menu-open .header .navbar-icon .line {
+    @apply bg-black-400;
+}
+.nav-menu-open .header .searchOpen input {
+    @apply border-black-400;
+}
+.nav-menu-open .header .search button img {
+    filter: invert(150%) sepia(0%) saturate(5323%) hue-rotate(154deg) brightness(100%) contrast(100%);
+}
+
+.navbarMoile {
+    @apply h-[90vh] overflow-y-auto pt-60;
+}
+.nav-menu-open .header-menu-top {
+    @apply hidden;
+}
+.mobile-submenu-open .mega-menu {
+    @apply block !important;
+}
